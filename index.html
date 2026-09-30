@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Professional CV and portfolio of Orlino D. Rabago Jr.">
+
+<meta name="description" content="Professional CV and portfolio of Orlino D. Rabago Jr. — Doctoral Candidate, Educator, English/ESL Specialist, Curriculum & Learning Design, EdTech and Courseware Developer.">
+
 <title>Orlino D. Rabago Jr. | Professional CV</title>
 
 <style>
@@ -44,8 +46,9 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255,255,255,0.96);
+    background: rgba(255,255,255,0.97);
     border-bottom: 1px solid #dce3ec;
+    backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -85,8 +88,11 @@ nav {
 /* HERO */
 
 .hero {
-    padding: 90px 0 75px;
-    background: white;
+    padding: 90px 0 80px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(21,94,239,0.14), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f7faff 100%);
+    border-bottom: 1px solid #dce3ec;
 }
 
 .hero-grid {
@@ -109,6 +115,7 @@ nav {
     font-size: clamp(3rem, 7vw, 6rem);
     line-height: 0.95;
     letter-spacing: -4px;
+    color: #111827;
 }
 
 .hero h1 span {
@@ -119,11 +126,13 @@ nav {
     font-size: 1.35rem;
     color: #4f5b6b;
     margin-bottom: 18px;
+    max-width: 900px;
 }
 
 .intro {
     color: #647184;
     max-width: 820px;
+    font-size: 1.03rem;
 }
 
 .buttons {
@@ -139,12 +148,15 @@ nav {
     border-radius: 10px;
     border: 1px solid #d8e0ea;
     background: white;
+    color: #18212f;
     font-weight: 700;
+    transition: 0.2s ease;
 }
 
 .button:hover {
     text-decoration: none;
     border-color: #155eef;
+    transform: translateY(-2px);
 }
 
 .button.primary {
@@ -153,15 +165,21 @@ nav {
     border-color: #155eef;
 }
 
+.button.primary:hover {
+    background: #0d4ed8;
+}
+
 .quick-card {
-    background: #f7f9fc;
+    background: white;
     border: 1px solid #dce3ec;
     border-radius: 18px;
     padding: 28px;
+    box-shadow: 0 15px 40px rgba(20,35,60,0.08);
 }
 
 .quick-card h3 {
     margin-bottom: 15px;
+    color: #111827;
 }
 
 .quick-card p {
@@ -173,6 +191,10 @@ nav {
     border: 0;
     border-top: 1px solid #dce3ec;
     margin: 20px 0;
+}
+
+.quick-card a {
+    word-break: break-word;
 }
 
 /* SECTIONS */
@@ -190,10 +212,12 @@ section {
     font-size: 2.1rem;
     letter-spacing: -1px;
     margin-bottom: 8px;
+    color: #111827;
 }
 
 .section-title p {
     color: #697586;
+    max-width: 800px;
 }
 
 /* CARDS */
@@ -209,11 +233,18 @@ section {
     border: 1px solid #dce3ec;
     border-radius: 16px;
     padding: 25px;
-    box-shadow: 0 8px 25px rgba(20, 35, 60, 0.05);
+    box-shadow: 0 8px 25px rgba(20,35,60,0.05);
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(20,35,60,0.09);
 }
 
 .card h3 {
     margin-bottom: 10px;
+    color: #111827;
 }
 
 .card p {
@@ -240,11 +271,7 @@ section {
 /* PROJECTS */
 
 .project {
-    transition: transform 0.2s ease;
-}
-
-.project:hover {
-    transform: translateY(-4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project h3 a {
@@ -253,6 +280,18 @@ section {
 
 .project h3 a:hover {
     color: #155eef;
+    text-decoration: none;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 18px;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.project-link::after {
+    content: " ↗";
 }
 
 /* EXPERIENCE */
@@ -282,6 +321,7 @@ section {
 
 .job h3 {
     margin-bottom: 3px;
+    color: #111827;
 }
 
 .company {
@@ -320,6 +360,7 @@ section {
 
 .education-item strong {
     display: block;
+    color: #111827;
 }
 
 .education-item span {
@@ -350,11 +391,13 @@ section {
     padding: 12px 16px;
     border-radius: 10px;
     font-weight: 600;
+    transition: 0.2s ease;
 }
 
 .contact-link:hover {
     border-color: #155eef;
     text-decoration: none;
+    transform: translateY(-2px);
 }
 
 /* FOOTER */
@@ -427,8 +470,6 @@ footer a {
 
 <body id="top">
 
-<!-- NAVIGATION -->
-
 <nav>
 <div class="container nav-container">
 
@@ -448,8 +489,6 @@ ORLINO<span>.</span>
 </div>
 </nav>
 
-
-<!-- HERO -->
 
 <header class="hero">
 
@@ -519,7 +558,8 @@ odrabagojr.ccsjdm@gmail.com
 
 <p>
 <a href="https://www.linkedin.com/in/orlinorabagojr"
-target="_blank">
+target="_blank"
+rel="noopener">
 LinkedIn / orlinorabagojr ↗
 </a>
 </p>
@@ -531,8 +571,6 @@ LinkedIn / orlinorabagojr ↗
 </header>
 
 
-<!-- PROFILE -->
-
 <section id="profile">
 
 <div class="container">
@@ -542,19 +580,18 @@ LinkedIn / orlinorabagojr ↗
 <h2>Profile</h2>
 
 <p>
-A learning professional connecting classroom practice,
-assessment, curriculum, and digital learning.
+A learning professional connecting classroom practice, assessment,
+curriculum, and digital learning.
 </p>
 
 </div>
 
 <p>
-Experienced English/ESL educator and learning professional with
-18+ years of academic and teaching experience across the Philippines
-and Oman. Demonstrated exposure to CEFR-aligned English assessment
-and instruction, including using the IELTS–CEFR model with Omani
-students and preparing learning materials based on Pearson B1 and
-B1+ lessons.
+Experienced English/ESL educator and learning professional with 18+ years
+of academic and teaching experience across the Philippines and Oman.
+Demonstrated exposure to CEFR-aligned English assessment and instruction,
+including using the IELTS–CEFR model with Omani students and preparing
+learning materials based on Pearson B1 and B1+ lessons.
 </p>
 
 <br>
@@ -567,42 +604,30 @@ review, contribution to a published leadership book, and professional
 learning with established education publishers and learning organizations.
 </p>
 
-
 <div class="cards" style="margin-top:30px">
 
 <div class="card">
-
 <h3>CEFR &amp; Assessment</h3>
-
 <p>
 IELTS–CEFR assessment exposure, ESL level and needs assessment,
 and learner progress reporting.
 </p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Learning Design</h3>
-
 <p>
 Curriculum planning, syllabi, CDPs, WIPs, rubrics, assignments,
 lesson slides, and instructional programs.
 </p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Publishing</h3>
-
 <p>
 Textbook-material review and approval, published leadership content,
 and professional exposure to major education organizations.
 </p>
-
 </div>
 
 </div>
@@ -611,8 +636,6 @@ and professional exposure to major education organizations.
 
 </section>
 
-
-<!-- EXPERTISE -->
 
 <section id="expertise">
 
@@ -623,8 +646,8 @@ and professional exposure to major education organizations.
 <h2>Core expertise</h2>
 
 <p>
-Capabilities relevant to English language learning,
-educational content, courseware, and learning design roles.
+Capabilities relevant to English language learning, educational content,
+courseware, and learning design roles.
 </p>
 
 </div>
@@ -657,8 +680,6 @@ educational content, courseware, and learning design roles.
 </section>
 
 
-<!-- PROJECTS -->
-
 <section id="projects">
 
 <div class="container">
@@ -674,15 +695,14 @@ educational requirements into functional learning tools and courseware.
 
 </div>
 
-
 <div class="cards">
-
 
 <div class="card project">
 
 <h3>
 <a href="https://deped-teacher-assistant-xi.vercel.app/"
-target="_blank">
+target="_blank"
+rel="noopener">
 DepEd Teacher Assistant ↗
 </a>
 </h3>
@@ -696,13 +716,18 @@ resources, grading, and other classroom workflows.
 <br>
 
 <div class="skills">
-
 <span class="skill">EdTech</span>
 <span class="skill">Teacher tools</span>
 <span class="skill">Assessment</span>
 <span class="skill">Courseware</span>
-
 </div>
+
+<a class="project-link"
+href="https://deped-teacher-assistant-xi.vercel.app/"
+target="_blank"
+rel="noopener">
+Visit application
+</a>
 
 </div>
 
@@ -711,7 +736,8 @@ resources, grading, and other classroom workflows.
 
 <h3>
 <a href="https://tinig-phi.vercel.app/"
-target="_blank">
+target="_blank"
+rel="noopener">
 TINIG — Digital Freedom Wall ↗
 </a>
 </h3>
@@ -725,13 +751,18 @@ concerns, ideas, feedback, and perspectives.
 <br>
 
 <div class="skills">
-
 <span class="skill">Student voice</span>
 <span class="skill">EdTech</span>
 <span class="skill">Digital engagement</span>
 <span class="skill">UX</span>
-
 </div>
+
+<a class="project-link"
+href="https://tinig-phi.vercel.app/"
+target="_blank"
+rel="noopener">
+Visit application
+</a>
 
 </div>
 
@@ -749,12 +780,10 @@ rubrics, curriculum documents, and technology-supported learning activities.
 <br>
 
 <div class="skills">
-
 <span class="skill">Learning design</span>
 <span class="skill">Instructional content</span>
 <span class="skill">Assessment</span>
 <span class="skill">LMS</span>
-
 </div>
 
 </div>
@@ -765,8 +794,6 @@ rubrics, curriculum documents, and technology-supported learning activities.
 
 </section>
 
-
-<!-- EXPERIENCE -->
 
 <section id="experience">
 
@@ -778,53 +805,38 @@ rubrics, curriculum documents, and technology-supported learning activities.
 
 <p>
 Selected roles emphasizing English, assessment, curriculum,
-instructional materials, and learning support.
+instructional materials, academic leadership, and learning support.
 </p>
 
 </div>
 
-
 <div class="experience">
 
+
+<!-- SAN ISIDRO NATIONAL HIGH SCHOOL -->
 
 <article class="job">
 
 <div class="job-date">
-11 Apr 2023 – Present
+Feb 2025 – Present
 </div>
 
 <div>
-
-<h3>English Teacher – Part-time</h3>
-
-<div class="company">
-Leadertalks
-</div>
+<h3>Junior High School Teacher – Full-time</h3>
+<div class="company">San Isidro National High School</div>
 
 <ul>
-
-<li>
-Prepare PowerPoint lesson slides relevant to Pearson B1 and B1+ lessons.
-</li>
-
-<li>
-Create assignments and learning tasks; check student outputs using Canvas.
-</li>
-
-<li>
-Provide supplementary learning materials through Zalo and facilitate sessions through Zoom.
-</li>
-
-<li>
-Communicate with administration regarding updates, improvements, and academic tasks.
-</li>
-
+<li>Teach English and Social Studies to Grades 9 and 10 learners.</li>
+<li>Coordinate school research and innovation programs and initiatives.</li>
+<li>Develop lesson logs and integrate innovative teaching and learning strategies.</li>
+<li>Present instructional practices, research, and innovations during Learning Action Cells and academic colloquia.</li>
 </ul>
-
 </div>
 
 </article>
 
+
+<!-- ANGLIT-LAAM -->
 
 <article class="job">
 
@@ -833,173 +845,128 @@ Aug 2023 – Present
 </div>
 
 <div>
-
-<h3>Master Teacher – ESL HB / Part-time</h3>
-
-<div class="company">
-ANGLIT-LAAM
-</div>
+<h3>Master ESL Teacher – Part-time, Work-from-Home</h3>
+<div class="company">Anglit-Laam, Inc.</div>
 
 <ul>
-
-<li>
-Conduct online ESL classes through Zoom with supporting digital platforms.
-</li>
-
-<li>
-Perform level and needs assessment for ESL learners.
-</li>
-
-<li>
-Prepare course notebooks and submit learner progress reports.
-</li>
-
+<li>Conduct ESL classes for learners ranging from elementary students to working professionals.</li>
+<li>Develop instructional materials and assessments for level-up and progression programs.</li>
+<li>Provide targeted interventions and remediation for learners requiring additional academic support.</li>
+<li>Monitor learner progress and provide appropriate instructional support.</li>
 </ul>
-
 </div>
 
 </article>
 
 
+<!-- FERNANDEZ COLLEGE -->
+
 <article class="job">
 
 <div class="job-date">
-04 Sep 2013 – 05 Sep 2021
+Jul 2024 – Dec 2024
 </div>
 
 <div>
+<h3>Vice-President for Academic Affairs</h3>
+<div class="company">Fernandez College of Arts and Technology</div>
 
+<ul>
+<li>Directed academic leadership activities involving personnel development, research, and community programs.</li>
+<li>Oversaw curriculum revision, academic policy planning, and class scheduling.</li>
+<li>Conducted classroom observations and supported instructional improvement.</li>
+<li>Coordinated academic activities and institutional engagement with educational partners.</li>
+</ul>
+</div>
+
+</article>
+
+
+<!-- CITY COLLEGE -->
+
+<article class="job">
+
+<div class="job-date">
+Jan 2022 – Jun 2023
+</div>
+
+<div>
+<h3>Assistant Professor III</h3>
+<div class="company">City College of San Jose del Monte</div>
+
+<ul>
+<li>Taught Arts and Social Sciences courses at the tertiary level.</li>
+<li>Created course designs, assessment rubrics, instructional materials, and learning activities.</li>
+<li>Advised students and contributed to academic planning and program development.</li>
+</ul>
+</div>
+
+</article>
+
+
+<!-- UTAS NIZWA -->
+
+<article class="job">
+
+<div class="job-date">
+Sep 2013 – Sep 2021
+</div>
+
+<div>
 <h3>English Lecturer</h3>
-
-<div class="company">
-University of Technology and Applied Sciences, Nizwa, Oman
-</div>
+<div class="company">University of Technology and Applied Sciences, Nizwa, Oman</div>
 
 <ul>
-
-<li>
-Teach the four macro skills of English to Omani students.
-</li>
-
-<li>
-Assess students using the IELTS–CEFR model.
-</li>
-
-<li>
-Develop CDPs, WIPs, rubrics, and related instructional materials.
-</li>
-
-<li>
-Provide academic advising and participate in seminars and webinars across academic institutions.
-</li>
-
+<li>Delivered English language instruction across the four macro skills: listening, speaking, reading, and writing.</li>
+<li>Assessed students using IELTS–CEFR-aligned models and proficiency frameworks.</li>
+<li>Developed academic resources, instructional materials, and assessment tools.</li>
+<li>Presented at seminars and participated in academic and professional development activities.</li>
 </ul>
-
 </div>
 
 </article>
 
 
-<article class="job">
-
-<div class="job-date">
-25 Jan 2022 – 30 Jun 2023
-</div>
-
-<div>
-
-<h3>Assistant Professor 3</h3>
-
-<div class="company">
-City College of San Jose del Monte
-</div>
-
-<ul>
-
-<li>
-Teach Arts and Social Sciences courses and conduct academic advising.
-</li>
-
-<li>
-Create CDPs, WIPs, rubrics, and related learning materials.
-</li>
-
-</ul>
-
-</div>
-
-</article>
-
+<!-- CENTRAL COLLEGES -->
 
 <article class="job">
 
 <div class="job-date">
-03 Nov 2008 – 16 Mar 2010
+Nov 2008 – Mar 2010
 </div>
 
 <div>
-
 <h3>Faculty Member</h3>
-
-<div class="company">
-Central Colleges of the Philippines
-</div>
+<div class="company">Central Colleges of the Philippines</div>
 
 <ul>
-
-<li>
-Teach Education, Speech and Oral Communication, Technical Writing, and Social Sciences.
-</li>
-
-<li>
-Develop syllabi and curricula for Intensive ESL programs and instructional-program matrices.
-</li>
-
-<li>
-Review and approve textbook materials for English, Education, Humanities, and Social Sciences departments.
-</li>
-
-<li>
-Conduct training, seminars, and workshops for future educators.
-</li>
-
+<li>Taught Education, Speech and Oral Communication, Technical Writing, and Social Sciences.</li>
+<li>Developed syllabi and curricula for Intensive ESL programs and instructional-program matrices.</li>
+<li>Reviewed and approved textbook materials for English, Education, Humanities, and Social Sciences departments.</li>
+<li>Conducted training, seminars, and workshops for future educators.</li>
 </ul>
-
 </div>
 
 </article>
 
 
+<!-- KINGSWAY -->
+
 <article class="job">
 
 <div class="job-date">
-16 Jul 2007 – 26 Sep 2008
+Jul 2007 – Sep 2008
 </div>
 
 <div>
-
 <h3>ESL Instructor / High School Teacher</h3>
-
-<div class="company">
-Kingsway Language School
-</div>
+<div class="company">Kingsway Language School</div>
 
 <ul>
-
-<li>
-Create CDPs, WIPs, and syllabi for various ESL levels.
-</li>
-
-<li>
-Conduct incoming-student interviews and prepare learner progress reports.
-</li>
-
-<li>
-Conduct special and group classes for learners with special needs.
-</li>
-
+<li>Developed CDPs, WIPs, and syllabi for various ESL levels.</li>
+<li>Conducted incoming-student interviews and prepared learner progress reports.</li>
+<li>Conducted special and group classes for learners with diverse learning needs.</li>
 </ul>
-
 </div>
 
 </article>
@@ -1011,58 +978,60 @@ Conduct special and group classes for learners with special needs.
 </section>
 
 
-<!-- PUBLISHING -->
+<section id="publishing">
 
-<section>
-
-<div class="container two-column">
-
-
-<div>
+<div class="container">
 
 <div class="section-title">
+
 <h2>Publishing &amp; content</h2>
+
+<p>
+Experience connecting educational content, publishing, textbook review,
+professional writing, and learning resources.
+</p>
+
+</div>
+
+<div class="two-column">
+
+<div class="card">
+
+<h3>Published contribution</h3>
+
+<p>
+<strong>Leadership &amp; Leadership Styles — Part 2: Charismatic Leadership</strong><br>
+Prasad Psycho Corporation, New Delhi, India<br>
+ISBN 978-93-84764-11-1
+</p>
+
 </div>
 
 <div class="card">
 
-<p>
-<strong>Published contribution:</strong>
-<em>Leadership &amp; Leadership Styles — Part 2: Charismatic Leadership</em>,
-Prasad Psycho Corporation, New Delhi, India;
-ISBN 978-93-84764-11-1.
-</p>
-
-<br>
+<h3>Textbook review</h3>
 
 <p>
-<strong>Textbook review:</strong>
 Review and approval of English, Education, Humanities, and Social Sciences
 textbook materials at Central Colleges of the Philippines.
 </p>
 
-<br>
+</div>
+
+<div class="card">
+
+<h3>Educational content</h3>
 
 <p>
-<strong>Educational content:</strong>
-<a href="https://teacherorly.blogspot.com/"
-target="_blank">
-Teacher learning resources at teacherorly.blogspot.com ↗
-</a>
+Teacher learning resources developed and shared through
+teacherorly.blogspot.com.
 </p>
 
 </div>
 
-</div>
-
-
-<div>
-
-<div class="section-title">
-<h2>Publisher exposure</h2>
-</div>
-
 <div class="card">
+
+<h3>Publisher exposure</h3>
 
 <p>
 Professional learning and webinars involving Pearson, REX Education,
@@ -1079,8 +1048,6 @@ and British Council, among others.
 </section>
 
 
-<!-- EDUCATION -->
-
 <section id="education">
 
 <div class="container">
@@ -1090,37 +1057,29 @@ and British Council, among others.
 <h2>Education &amp; qualifications</h2>
 
 <p>
-Academic preparation spanning educational management,
-teaching, TESOL/TEFL, and training.
+Academic preparation spanning educational management, teaching,
+TESOL/TEFL, and professional training.
 </p>
 
 </div>
 
-
 <div class="two-column">
-
 
 <div class="card">
 
-
 <div class="education-item">
 
-<strong>
-Doctor in Educational Management — Doctoral Candidate
-</strong>
+<strong>Doctor in Educational Management</strong>
 
 <span>
-Polytechnic University of the Philippines · Dissertation stage
+Polytechnic University of the Philippines · Doctoral Candidate · Dissertation stage
 </span>
 
 </div>
 
-
 <div class="education-item">
 
-<strong>
-Master in Educational Management
-</strong>
+<strong>Master in Educational Management</strong>
 
 <span>
 Polytechnic University of the Philippines · 2006–2008 ·
@@ -1129,17 +1088,14 @@ Major in Learning Theories &amp; Innovations in Teaching
 
 </div>
 
-
 <div class="education-item">
 
-<strong>
-BSBA: Management
-</strong>
+<strong>BSBA: Management</strong>
 
 <span>
 St. Dominic Savio College · 2000–2004 ·
-double degree / B.S.Ed. – Business Technology;
-passed the Licensure Examination for Teachers
+Double degree / B.S.Ed. – Business Technology ·
+Passed the Licensure Examination for Teachers
 </span>
 
 </div>
@@ -1149,12 +1105,9 @@ passed the Licensure Examination for Teachers
 
 <div class="card">
 
-
 <div class="education-item">
 
-<strong>
-TESOL Certificate
-</strong>
+<strong>TESOL Certificate</strong>
 
 <span>
 Claret School of Quezon City · 2017
@@ -1162,12 +1115,9 @@ Claret School of Quezon City · 2017
 
 </div>
 
-
 <div class="education-item">
 
-<strong>
-TEFL Certificate
-</strong>
+<strong>TEFL Certificate</strong>
 
 <span>
 TEFL Professional Institute · 2023
@@ -1175,17 +1125,14 @@ TEFL Professional Institute · 2023
 
 </div>
 
-
 <div class="education-item">
 
-<strong>
-TESDA Training
-</strong>
+<strong>TESDA Training</strong>
 
 <span>
-2021–2022 · Plan Training Session; Utilize Electronic Media
-in Facilitating Training; Supervising Work-Based Learning;
-Participating in Workplace Communication; Introduction to CSS
+2021–2022 · Plan Training Session; Utilize Electronic Media in Facilitating
+Training; Supervising Work-Based Learning; Participating in Workplace
+Communication; Introduction to CSS
 </span>
 
 </div>
@@ -1199,16 +1146,14 @@ Participating in Workplace Communication; Introduction to CSS
 </section>
 
 
-<!-- STATEMENT -->
-
 <section>
 
 <div class="container">
 
 <div class="quote">
 
-“Connecting language, assessment, curriculum, and learning design
-to create practical and engaging educational experiences.”
+“Connecting language, assessment, curriculum, and learning design to create
+practical and engaging educational experiences.”
 
 </div>
 
@@ -1216,8 +1161,6 @@ to create practical and engaging educational experiences.”
 
 </section>
 
-
-<!-- CONTACT -->
 
 <section id="contact">
 
@@ -1233,7 +1176,6 @@ assessment, educational content, and courseware development.
 </p>
 
 </div>
-
 
 <div class="contact-links">
 
@@ -1254,26 +1196,28 @@ href="tel:+639690756327">
 
 <a class="contact-link"
 href="https://www.linkedin.com/in/orlinorabagojr"
+target="_blank"
+rel="noopener">
+LinkedIn · Orlino D. Rabago Jr. ↗
+</a>
+
+<a class="contact-link"
+href="ORLINO_CV_Version%202026.pdf"
 target="_blank">
-LinkedIn ↗
+Download CV PDF ↗
 </a>
 
 </div>
-
 
 <br>
 
 <div class="card">
 
-<strong>
-Current academic status
-</strong>
+<h3>Current academic status</h3>
 
-<p style="color:#657184;margin-top:6px">
-
-Doctoral Candidate in Educational Management ·
+<p>
+<strong>Doctoral Candidate in Educational Management</strong><br>
 Polytechnic University of the Philippines · Dissertation stage
-
 </p>
 
 </div>
@@ -1283,22 +1227,24 @@ Polytechnic University of the Philippines · Dissertation stage
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
 <div class="container">
 
-© 2026 Orlino D. Rabago Jr. · Professional CV &amp; Portfolio
+<a href="#top" class="back-top">Back to top ↑</a>
 
-<a href="#top" class="back-top">
-Back to top ↑
-</a>
+<p>
+© 2026 Orlino D. Rabago Jr. · Professional CV &amp; Portfolio
+</p>
+
+<p style="margin-top:8px;">
+Doctoral Candidate · Educator · English / ESL Specialist ·
+Curriculum &amp; Learning Design · EdTech &amp; Courseware Developer
+</p>
 
 </div>
 
 </footer>
-
 
 </body>
 </html>
