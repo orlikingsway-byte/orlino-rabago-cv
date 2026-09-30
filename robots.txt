@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://orlikingsway-byte.github.io/orlino-rabago-cv/sitemap.xml
